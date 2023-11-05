@@ -19,7 +19,7 @@ public class HotelController {
         return ResponseEntity.status(HttpStatus.CREATED).body(hotelService.create(hotel));
     }
     @GetMapping("/{hotelId}")
-    public ResponseEntity<Hotel> getHotelById(@RequestParam String hotelId){
+    public ResponseEntity<Hotel> getHotelById(@PathVariable String hotelId){
         return ResponseEntity.status(HttpStatus.OK).body(hotelService.get(hotelId));
     }
 

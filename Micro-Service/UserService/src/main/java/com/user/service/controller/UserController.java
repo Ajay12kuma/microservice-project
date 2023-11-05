@@ -20,11 +20,10 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(user1);
 
     }
-    @GetMapping("/{userId}")
+    @GetMapping("/{userId}") //localhost:8081/userservice/10d8db7f-cda7-4e53-bbc2-77d54dee29fb
     public ResponseEntity<User> getSingleUser(@PathVariable String userId){
         User user1 = userService.getUser(userId);
         return ResponseEntity.ok(user1);
-
     }
 
     @GetMapping
